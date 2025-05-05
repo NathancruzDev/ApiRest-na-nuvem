@@ -1,0 +1,13 @@
+edu\dio\controller\exceptions\GlobalExceptionHandler.class
+edu\dio\model\News.class
+edu\dio\model\Feature.class
+edu\dio\model\Card.class
+edu\dio\DemoApplication.class
+edu\dio\model\BaseItem.class
+edu\dio\model\User.class
+edu\dio\controller\BdController.class
+edu\dio\repository\UserRepository.class
+edu\dio\service\UserService.class
+edu\dio\service\implementos\UserServiceImplemento.class
+edu\dio\controller\UserController.class
+edu\dio\model\Account.class
