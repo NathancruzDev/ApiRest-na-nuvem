@@ -3,14 +3,17 @@ package edu.dio.service.implementos;
 import edu.dio.model.User;
 import edu.dio.repository.UserRepository;
 import edu.dio.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
 public class UserServiceImplemento implements UserService {
     //interface de acesso a dados.
-    private final UserRepository userRepository;
+    @Autowired
+    private UserRepository userRepository;
 
     public UserServiceImplemento(UserRepository userRepository){
         this.userRepository=userRepository;
@@ -29,4 +32,8 @@ public class UserServiceImplemento implements UserService {
         }
         return userRepository.save(userToCreate);
     }
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
 }

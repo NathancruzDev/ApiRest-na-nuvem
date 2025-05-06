@@ -1,5 +1,6 @@
 package edu.dio.model;
 
+
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -17,4 +18,15 @@ public class Account {
     private BigDecimal balance;
     @Column(name="additional_limit",scale = 2, precision =13)
     private BigDecimal limit;
+    @OneToOne(cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(name = "pix_id", referencedColumnName = "id")
+    private Pix pix;
+
+    public Pix getPix() {
+        return pix;
+    }
+    public String getPixKey() {
+        return pix.getPixKey();
+    }
+
 }

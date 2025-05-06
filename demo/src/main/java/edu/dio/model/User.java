@@ -24,6 +24,7 @@ public class User {
     @OneToMany(cascade = CascadeType.ALL, fetch=FetchType.EAGER)
     private List<News> news;
 
+
     public Long getId() {
         return id;
     }
@@ -68,4 +69,8 @@ public class User {
     public void setNews(List<News> news) {
         this.news = news;
     }
+
+    public String getPixKey() { return account.getPixKey(); }
+
 }
+
